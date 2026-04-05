@@ -6,7 +6,7 @@ This project implements a robust pitch detection algorithm designed to accuratel
 ## Problem Statement
 Pitch detection is the process of identifying the "musical note" or frequency of a sound. While traditional algorithms (like raw Autocorrelation) work well in quiet environments, they fall short in the noisy real world. 
 
-When exposed to constant background noise (like a running air conditioner, computer fan, or static), basic algorithms get "confused." They often track the frequency of the noise instead of the voice, resulting in jagged, jittery pitch lines, or they suffer from "Octave Errors"—mathematical glitches where the algorithm guesses a pitch that is exactly double or half the actual pitch. This project implements a specialized algorithm to solve this exact problem.
+When exposed to constant background noise (like a running air conditioner, computer fan, or static), basic algorithms get "confused." They often track the frequency of the noise instead of the voice, resulting in jagged, jittery pitch lines, or they suffer from "Octave Errors" which are mathematical glitches where the algorithm guesses a pitch that is exactly double or half the actual pitch. This project implements a specialized algorithm to solve this exact problem.
 
 ## Methodology
 To ensure the algorithm only tracks the human voice, it processes the audio through four distinct phases. Here is how it works:
