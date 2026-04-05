@@ -35,11 +35,12 @@ The advanced Paper Method vastly outperformed the Baseline algorithm across all 
 | **Mean Pitch** | $184.2\text{ Hz}$ | $167.6\text{ Hz}$ |
 | **Standard Deviation** | $27.5$ | $74.1$ |
 | **Voiced Frames Detected** | $508 / 509$ | $489 / 509$ |
-| **High-Frequency Errors (>300 Hz)** | **$0$** | $41$ |
+| **Half Errors Errors (<120 Hz)** | *$15$* | $118$ |
+| **Double Errors (>300 Hz)** | *$0$* | $41$ |
 
 ### What these numbers mean:
-1. **Stability (Standard Deviation):** The Baseline algorithm jumped wildly between the vocal pitch and the noise, resulting in a massive standard deviation of $74.1$. The Paper method ignored the noise relatively well, providing a smooth, accurate pitch line with a deviation of only $27.5$ (a $63\%$ improvement).
-2. **Elimination of Octave Errors:** The most glaring failure of the Baseline method was that it was tricked by high-pitched static and low pitched hums, guessing a pitch above 300 Hz a total of 41 times and a pitch of below 120 Hz a total of 118 times. Because the Paper method uses LPC filtering and smart post-processing, it reduced the "Double Errors" to 0 ($100\%$ improvement) and "Half Errors" to 15 ($87\%$ improvement)
+1. **Stability (Standard Deviation):** The Baseline algorithm jumped wildly between the vocal pitch and the noise, resulting in a massive standard deviation of $74.1$. The Paper method ignored the noise relatively well, providing a smooth, accurate pitch line with a deviation of only $27.5$ (a $63\%$% improvement).
+2. **Elimination of Octave Errors:** The most glaring failure of the Baseline method was that it was tricked by high-pitched static and low pitched hums, guessing a pitch above 300 Hz a total of 41 times and a pitch of below 120 Hz a total of 118 times. Because the Paper method uses LPC filtering and smart post-processing, it reduced the "Double Errors" to 0 ($100\%$% improvement) and "Half Errors" to 15 ($87\%$% improvement)
 3. **Reliability:** In heavy noise, the Baseline completely lost the voice for 20 frames, classifying them as unvoiced. The Paper method successfully tracked the voice for 508 out of 509 frames.
 4. **Mean:** The mean pitch is roughly equal as expected. But lower in the Baseline method, possibly due to significant "Half Errors"
 
