@@ -45,3 +45,7 @@ The advanced Paper Method vastly outperformed the Baseline algorithm across all 
 4. **Mean:** The mean pitch is roughly equal as expected. But lower in the Baseline method, possibly due to significant "Half Errors"
 
 **Conclusion:** While computationally heavier, the combination of Spectral Subtraction and LPC inverse filtering is superior for accurate pitch detection in general noisy environments. 
+
+## Reference
+The original paper on which this implementation is based:
+Zhen-Dong Zhao, Xi-Mei Hu and Jing-Feng Tian, "An effective pitch detection method for speech signals with low signal-to-noise ratio," 2008 International Conference on Machine Learning and Cybernetics, Kunming, China, 2008, pp. 2775-2778, doi: 10.1109/ICMLC.2008.4620879. keywords: {Speech;Correlation;Noise measurement;Speech processing;Machine learning;Cybernetics;Signal to noise ratio;Pitch detection;spectral subtraction;linear prediction error;cepstrum;autocorrelation function},
